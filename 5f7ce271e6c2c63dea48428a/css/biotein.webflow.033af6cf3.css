@@ -1866,6 +1866,11 @@ p {
   }
 }
 
+#Assays{
+   display:none;
+   
+}
+
 @media screen and (max-width: 767px) {
   #w-node-9a998f3341b0-2cab1336 {
     -webkit-box-ordinal-group: -9998;
