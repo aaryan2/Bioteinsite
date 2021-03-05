@@ -1076,7 +1076,7 @@ p {
 
 @media screen and (min-width: 1440px) {
   .header-section {
-    background-image: url("/biotein1.github.io/5f7ce271e6c2c63dea48428a/Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
+    background-image: url("../Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
     background-position: 50% 0%;
     background-size: cover;
     -webkit-filter: brightness(100%) saturate(110%) contrast(100%);
@@ -1323,7 +1323,7 @@ p {
   .header-section {
     padding-right: 0%;
     padding-left: 0%;
-    background-image: url("/biotein1.github.io/5f7ce271e6c2c63dea48428a/Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
+    background-image: url("../Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
     background-position: 50% 0%;
     -webkit-filter: brightness(98%) contrast(110%);
     filter: brightness(98%) contrast(110%);
@@ -1481,7 +1481,7 @@ p {
   }
 
   .header-section {
-    background-image: url("/biotein1.github.io/5f7ce271e6c2c63dea48428a/Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
+    background-image: url("../Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
     background-position: 50% 0%;
   }
 
@@ -1663,7 +1663,7 @@ p {
   }
 
   .header-section {
-    background-image: url("/biotein1.github.io/5f7ce271e6c2c63dea48428a/Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
+    background-image: url("../Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg")
     background-position: 50% 0%;
   }
 
