@@ -18389,7 +18389,6 @@ Webflow.define('navbar', module.exports = function ($, _) {
 });
 
 /***/ })
-/******/ ]);/**
  * ----------------------------------------------------------------------
  * Webflow: Interactions 2.0: Init
  */
