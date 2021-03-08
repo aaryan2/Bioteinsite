@@ -144,8 +144,8 @@ p {
   background-image: url("../5f8b5075ba4f451e229edbb4_pioneer.jpg");
   background-position: 100% 50%;
   background-size: cover;
-  -webkit-filter: brightness(98%) saturate(100%) contrast(100%);
-  filter: brightness(98%) saturate(100%) contrast(100%);
+  -webkit-filter: brightness(70%) saturate(100%) contrast(100%);
+  filter: brightness(70%) saturate(100%) contrast(100%);
 }
 
 .header-section.r {
