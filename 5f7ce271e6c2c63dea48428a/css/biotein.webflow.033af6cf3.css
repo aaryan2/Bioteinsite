@@ -241,7 +241,6 @@ p {
   background-color: transparent;
 /*   background-image: url("../Sep24_2020_Getty_1207979800_DNA-scaled-e1600961233346.jpg") */
   background-image: url("../5f8b5075ba4f451e229edbb4_pioneer.jpg");
-  backdrop-filter: brightness(70%);
   background-position: 100% 50%;
   background-size: cover;
   -webkit-filter: brightness(98%) saturate(100%) contrast(100%);
