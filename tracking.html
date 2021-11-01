@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, shrink-to-fit=no">
+    <title>Biotein's User Website</title>
+    <meta name="description" content="Track your biological age, recommendations, and your tests taken here.">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- import the webpage's javascript file -->
+    <script type="module" src="trscript.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+     <script >
+      const email = localStorage.getItem('emailLocalStorage');
+      var userEm = email;
+      console.log(userEm);
+      var xhttp = new XMLHttpRequest();
+      // xhttp.open("GET", "https://api.airtable.com/v0/appyMwAs4f8TL0vzT/Table%201", true);
+      xhttp.open("GET", "https://api.airtable.com/v0/appyMwAs4f8TL0vzT/Table%201?fields%5B%5D=BAA&fields%5B%5D=Reccs&filterByFormula=SEARCH(%22"+ email + "%22%2C%7BName%7D)", true)
+      console.log("https://api.airtable.com/v0/appyMwAs4f8TL0vzT/Table%201?fields%5B%5D=BAA&fields%5B%5D=Reccs&filterByFormula=SEARCH(%22"+ email + "%22%2C%7BName%7D)");
+      xhttp.setRequestHeader('Content-type','application/json');
+      xhttp.setRequestHeader('Authorization', "Bearer keye3BVbLOzTvmR8L");
+      xhttp.send();
+      var userResp;
+      var data1 = [68, 65, 61, 53, 54, 52];
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          console.log(this.responseText)
+          userResp = JSON.stringify(this.responseText);
+          console.log(userResp);
+          var userJSON = JSON.parse(this.responseText);
+          console.log(userJSON.records[0].fields["BAA"]);
+          var data2 = userJSON.records[0].fields["BAA"];
+          console.log(data2);
+          console.log(typeof data2);
+          data2 = data2.slice(1,-1);
+          var data3 = data2.split(', ');
+          console.log(data3);
+          console.log(typeof data3);
+          var data = data3.map(Number);
+          console.log(data);
+          console.log(typeof data);
+            var chart = new CanvasJS.Chart("chartContainer", {
+              animationEnabled: true,
+              theme: "light2",
+              title:{
+                text: "Your Biological Age Over Time"
+              },   
+              data: [{  
+                type: "line",
+                    indexLabelFontSize: 16,
+                dataPoints: [
+                ]
+              }]
+            });
+            chart.render();
+            for(var i = 0; i<data.length; i++) {
+              chart.data[0].addTo("dataPoints", {y: data[i]});
+              
+            }
+              //remove canvasjs trial version, get on pro or whatever
+          var reccs = userJSON.records[0].fields["Reccs"];
+          reccs = reccs.slice(1,-1);
+          var reccs = reccs.split(', ');
+          for(var i = 0; i<reccs.length; i++) {
+            makeIt(i);
+          }
+            function makeIt(i) {
+              var recc = document.createElement("p");
+              recc.innerHTML = reccs[i];   
+              recc.classList.add("recco");// 
+              document.body.appendChild(recc);
+            }
+        }
+      };
+      //why is hard reload required to get chart to load
+    </script>
+    
+  </head>  
+             
+  <body>
+    <nav>
+                <img src="https://cdn.glitch.com/8de4a538-da4b-49c9-ace8-336aa8031b65%2Ffavicontransparentbiotein.png?v=1612608791981" alt="Biotein logo" height="64" width="64">
+      <div class="dropdown">
+        <a href="tracking.html">Tracking</a>
+        <a href="purchase.html">Purchase</a>
+        <a href="input.html">Input</a>
+        <button id="btnLogout" class="amazing1">Log Out</button>
+      </div>
+    </nav>
+    <br> <br>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <br> <br>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <h2><b>Protein A</b></h2>
+      <p>This is a protein that's involved in ____. Having low levels is generally better, as ____________.</p>
+      <p>However, high levels can be remedied through X and Y.</p>
+    <br>
+    <h2><b>Protein B</b></h2>
+      <p>This is a protein that's involved in ____. Having high levels is generally better, as ____________.</p>
+      <p>However, low levels can be remedied through X and Y.</p>
+    <br>
+    <h2><b>Protein C</b></h2>
+      <p>This is a protein that's involved in ____. Having low levels is generally better, as ____________.</p>
+      <p>However, high levels can be remedied through X and Y.</p>
+    <br>
+    <h2><b>Protein D</b></h2>
+      <p>This is a protein that's involved in ____. Having high levels is generally better, as ____________.</p>
+      <p>However, low levels can be remedied through X and Y.</p>
+    <br>
+    <h2><b>Recommendations</b></h2>
+  </body>
+</html>
