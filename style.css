@@ -1,0 +1,183 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 2em;
+}
+
+html{
+    height: 100%;
+    scrolling-behavior: smooth;
+}
+
+body{
+    background-color:white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+nav{
+    background-color:white;
+    color: #009B35;
+    font-family: 'Lato', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+}
+a{
+    color:#009B35;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-align: left;
+}
+nav a {
+    color: #009B35;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+}
+
+main{
+    height: 550px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 100px;
+}
+
+h1{
+    background-size: cover;
+    font-size: 2.3rem;
+    color:#009B35;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1rem;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.212);
+}
+h2{
+    background-size: cover;
+    font-size: 1.9rem;
+    color:#009B35;
+    font-family: 'Lato', sans-serif;
+}
+p{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    line-height: 0.6rem;
+    margin-bottom: 0.5rem;
+    color:#009B35;
+    text-align: center;
+}
+footer p{
+    font-size: 8px;
+    color:white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+footer{
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+hr{
+    margin-top: 40px;
+    color:#009B35;
+}
+.colorG {
+    color:#009B35;
+}
+form {
+  border: 3px solid #f1f1f1;
+  width: 80%;
+  align: center;
+  display: inline-block;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 95%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  align: center;
+}
+
+input[type=submit]{
+  background-color: #009B35;
+  color: white;
+  width: 100%;
+  align: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  display: inline-block;
+  align: center;
+  
+
+}
+
+/* Set a style for all buttons */
+.amazing {
+  background-color: #009B35;
+  color: white;
+  width: 95%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.amazing:hover {
+  opacity: 0.8;
+  width: 95%;
+}
+.amazing1 {
+  background-color: #009B35;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height:70px;
+  text-align:center;
+}
+.amazing1:hover {
+  opacity: 0.8;
+}
+.formfield {
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  width: 95%;
+  height:56px;
+  text-align:center;
+}
+.testimonial {
+  border-radius: 25px;
+  background: #FFFFFF;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+  display:inline-block;
+}
+
+.recco {
+  border-radius: 25px;
+  background: #FFFFFF;
+  border: 2px solid #73AD21;
+  padding: 20px;
+/*   width: 200px;
+  height: 150px;  */
+  display:inline-block;
+}
